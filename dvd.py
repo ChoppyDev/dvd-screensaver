@@ -5,7 +5,7 @@ size = w,h = 1920, 1080
 black = 0, 0,0
 
 
-speed =  [1,1]
+speed =  [10,10]
 
 screen = pygame.display.set_mode(size)
 
@@ -14,7 +14,7 @@ dvdimg = pygame.transform.scale(dvdimg, (200, 100) )
 dvdhitbox = dvdimg.get_rect()
 dvdhitbox2 = dvdimg.convert_alpha()
 
-print(dvdhitbox2)
+#print(dvdhitbox2)
 
 def randomColor():
     r = random.randint(0,255)
@@ -22,7 +22,7 @@ def randomColor():
     b = random.randint(0,255)
     tintimg = dvdimg.convert_alpha()
     color = r,g,b,100
-    print(r,g,b)
+    #print(r,g,b)
     dvdimg.fill(color,None, special_flags=pygame.BLEND_RGB_MAX)
 
 randomColor()
